@@ -12,7 +12,7 @@
   "language": "zh-CN",
   "canvas": { "width": 1280, "height": 720 },
   "theme": {
-    "fonts": { "sans": "Noto Sans CJK SC", "serif": "Noto Serif CJK SC" },
+    "fonts": { "sans": "Noto Sans CJK SC" },
     "colors": { "red": "C7000B", "ink": "1A1A1C", "muted": "585860", "line": "E7E7E7", "paper": "FFFFFF" }
   },
   "slides": []

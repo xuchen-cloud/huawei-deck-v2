@@ -9,9 +9,9 @@ All paths are relative to `assets/huawei-refs/`.
 - `官方PPT模板-浅色16-9.pptx`: official master and visual reference when exact official-template following is required.
 - `pages/官方模板-图表配色示范页.jpg`: official grey-scale plus Huawei-red chart reference.
 - `logos/huawei-横版logo-透明.png` and `logos/huawei-花瓣-红.png`: use only when the user or source template requires a logo.
+- `logos/huawei-花瓣-大.png` and `logos/huaweicloud.png`: use only when the page script calls for the corresponding brand mark.
 - `components/icons-gray/`: neutral line icons for a genuine category or status, not generic decoration.
-- `components/插画-红色线稿园区-白底.png` and `-黑底.png`: optional Huawei environment illustration for an appropriate cover or section.
-- `covers/`: official-extracted KV images. Use only for a requested visual cover or section page.
+- `covers/封面-雪山红伞KV.png` and `封面-深蓝金光轨KV.jpeg`: optional official-extracted cover visuals; use only when the page script authorizes a visual cover.
 - `pages/官方模板-封面页.jpg`, `目录页.jpg`, `ThankYou页.jpg`: references, not mandatory page types.
 
 ## Authority and provenance

@@ -73,7 +73,6 @@ const libreoffice = executable(["soffice", "libreoffice"]);
 const fontFiles = [
   "NotoSansCJKsc-Regular.otf",
   "NotoSansCJKsc-Bold.otf",
-  "NotoSerifCJKsc-Regular.otf",
 ].map((name) => path.join(skillDir, "assets", "fonts", "otf", name));
 const fontsPresent = fontFiles.every((file) => fs.existsSync(file));
 

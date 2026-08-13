@@ -19,7 +19,6 @@ config_file="$runtime_dir/fonts.conf"
 required_fonts=(
   "NotoSansCJKsc-Regular.otf"
   "NotoSansCJKsc-Bold.otf"
-  "NotoSerifCJKsc-Regular.otf"
 )
 
 for font_file in "${required_fonts[@]}"; do
@@ -55,7 +54,6 @@ if [[ "$FONTCONFIG_AVAILABLE" == true ]]; then
 
   sans_regular="$(match_font 'Noto Sans CJK SC:style=Regular')"
   sans_bold="$(match_font 'Noto Sans CJK SC:style=Bold')"
-  serif_regular="$(match_font 'Noto Serif CJK SC:style=Regular')"
 
   check_match() {
     local actual="$1" expected="$2"
@@ -67,7 +65,6 @@ if [[ "$FONTCONFIG_AVAILABLE" == true ]]; then
 
   check_match "$sans_regular"  "Noto Sans CJK SC|Regular|$font_dir/NotoSansCJKsc-Regular.otf"
   check_match "$sans_bold"     "Noto Sans CJK SC|Bold|$font_dir/NotoSansCJKsc-Bold.otf"
-  check_match "$serif_regular" "Noto Serif CJK SC|Regular|$font_dir/NotoSerifCJKsc-Regular.otf"
 else
   # fontconfig is unavailable on this host (common on macOS). Font files are
   # verified above; consumers that manage their own CJK pipeline (engine
@@ -75,7 +72,6 @@ else
   printf 'fontconfig not found; verified bundled font files only: %s\n' "$font_dir" >&2
   sans_regular="Noto Sans CJK SC|Regular|$font_dir/NotoSansCJKsc-Regular.otf"
   sans_bold="Noto Sans CJK SC|Bold|$font_dir/NotoSansCJKsc-Bold.otf"
-  serif_regular="Noto Serif CJK SC|Regular|$font_dir/NotoSerifCJKsc-Regular.otf"
 fi
 
 if [[ $# -eq 0 ]]; then
@@ -85,7 +81,7 @@ fi
 
 case "$1" in
   --verify)
-    printf '%s\n%s\n%s\n' "$sans_regular" "$sans_bold" "$serif_regular"
+    printf '%s\n%s\n' "$sans_regular" "$sans_bold"
     ;;
   --)
     shift

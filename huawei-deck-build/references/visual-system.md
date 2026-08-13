@@ -34,7 +34,7 @@
 
 ## 2. 字体与文字设计 Token
 
-- 中文统一 `Noto Sans CJK SC`；需要衬线效果时用 `Noto Serif CJK SC`。不混用 `Noto Sans SC`、微软雅黑、苹方或未验证别名。字体预检与渲染策略见 `pptx-build-and-qa.md`。
+- 中文统一 `Noto Sans CJK SC`，不混用 `Noto Sans SC`、微软雅黑、苹方、衬线字体或未验证别名。字体预检与渲染策略见 `pptx-build-and-qa.md`。
 - 字重只用 Regular / Bold 两档（随附字体包即这两档）。
 
 ### 2.1 文字颜色角色

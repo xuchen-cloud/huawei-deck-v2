@@ -26,7 +26,7 @@
 
 - 构建与渲染前运行 `bash scripts/setup-fonts.sh --verify`；字体已预解压至 `assets/fonts/otf/`，脚本负责生成任务级 Fontconfig 并校验解析结果。需要为子进程注入字体环境时，用 `bash scripts/setup-fonts.sh -- <command>` 或将其输出的 `FONTCONFIG_FILE` 传给渲染进程。
 - 宿主无 fontconfig（如未装 fontconfig 的 macOS）时，脚本降级为验证字体文件完整性并提示；渲染检查可使用操作系统的已验证 CJK 管线，并在 `qa-report.md` 记录声明字体与实际渲染字体。
-- PPTX 内中文字体声明始终使用 `Noto Sans CJK SC`（衬线需求用 `Noto Serif CJK SC`）。
+- PPTX 内中文字体声明始终使用 `Noto Sans CJK SC`。
 - 任何引擎下，中文都不得以拉丁字体回退渲染；发现回退即停止并修复字体链路，不带着错误继续排版。
 
 ## 3. 原生实现规则
@@ -133,7 +133,7 @@ node scripts/patch-pptx-grouping.mjs --input intermediate.pptx --output final.pp
 - 行列内容为原生表格，图表为原生图表；
 - 语义模块可组合、可取消组合，无 `noGrp`/`noUngrp` 锁；
 - 可编辑性、可组合性、可取消组合性与二次编辑的便利度视为验收标准，而非可选的润色；
-- 中文使用 `Noto Sans CJK SC` / `Noto Serif CJK SC`，渲染无拉丁回退；
+- 中文使用 `Noto Sans CJK SC`，渲染无拉丁回退；
 - 最终 PPTX 可被严格 Open XML 读取器打开并正常渲染。
 - 使用 `node scripts/inspect-pptx.mjs --pptx final.pptx --plan slide-plan.json --json qa-structure.json` 校验页数、原生图表/表格、备注来源、语义分组和分组锁；任何 error 都阻断交付。
 
