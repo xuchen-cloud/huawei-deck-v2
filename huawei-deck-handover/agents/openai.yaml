@@ -1,0 +1,6 @@
+interface:
+  display_name: "Huawei Deck Handover"
+  short_description: "Transfer and resume a Huawei deck across tasks, agents, or runtimes"
+  default_prompt: "Use $huawei-deck-handover to validate and transfer this Huawei deck project to another task or environment."
+policy:
+  allow_implicit_invocation: false

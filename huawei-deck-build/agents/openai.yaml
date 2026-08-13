@@ -1,0 +1,6 @@
+interface:
+  display_name: "Huawei Deck Build"
+  short_description: "Build and verify an editable Huawei-style PowerPoint presentation"
+  default_prompt: "Use $huawei-deck-build to build and verify an editable Huawei-style PPTX from an approved page script."
+policy:
+  allow_implicit_invocation: false

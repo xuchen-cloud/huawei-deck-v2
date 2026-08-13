@@ -1,0 +1,6 @@
+interface:
+  display_name: "Huawei Deck"
+  short_description: "Clarify and confirm intent for an editable Huawei presentation"
+  default_prompt: "Use $huawei-deck to clarify and confirm the intent for this Huawei-style presentation."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Huawei Deck Outline"
+  short_description: "Create and confirm the narrative and page outline for a Huawei deck"
+  default_prompt: "Use $huawei-deck-outline to create and confirm the outline from an approved intent brief."
+policy:
+  allow_implicit_invocation: false

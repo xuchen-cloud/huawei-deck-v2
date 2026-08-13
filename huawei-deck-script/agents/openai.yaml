@@ -1,0 +1,6 @@
+interface:
+  display_name: "Huawei Deck Script"
+  short_description: "Research and write an approved page-by-page Huawei deck script"
+  default_prompt: "Use $huawei-deck-script to research and create the page-by-page script from an approved outline."
+policy:
+  allow_implicit_invocation: false
